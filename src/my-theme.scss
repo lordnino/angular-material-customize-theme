@@ -1,0 +1,45 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$mat-alacam: (
+  50: #009845,
+  100: #009845,
+  200: #009845,
+  300: #009845,
+  400: #009845,
+  500: #009845,
+  600: #009845,
+  700: #009845,
+  800: #009845,
+  900: #009845,
+  A100: #009845,
+  A200: #009845,
+  A400: #009845,
+  A700: #009845,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$my-theme-primary: mat-palette($mat-alacam);
+$my-theme-accent: mat-palette($mat-alacam, A200, A100, A400);
+
+$my-theme-warn: mat-palette($mat-red);
+
+$my-theme: mat-light-theme($my-theme-primary, $my-theme-accent, $my-theme-warn);
+
+@include angular-material-theme($my-theme);
